@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Where is Waldo - Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the front-end of the "Where is Waldo" game, built with React, TypeScript, and Vite. The game allows users to find hidden characters in an image and submit their scores to a leaderboard.
 
-Currently, two official plugins are available:
+## Live Site
+[where-is-waldo-client-side.netlify.app](https://where-is-waldo-client-side.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Server Repository
+[Where-is-Waldo-Server-Side](https://github.com/mpapila/Where-is-Waldo-Server-Side)
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
+- **Vite**: Next-generation front-end tooling for fast development.
+- **MUI (Material-UI)**: React components for faster and easier web development.
+- **ESLint**: Tool for identifying and fixing linting problems in JavaScript and TypeScript code.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Interactive Game Interface**: Find hidden characters within an image.
+- **Timer**: Tracks the time taken by the player to find all characters.
+- **API Integration**: Fetches the scoreboard and checks positions via a backend API.
+- **Responsive Design**: Adjusts to different screen sizes with dynamic image rendering and resizing.
+- **Score Submission**: Allows users to submit their scores to the leaderboard.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Project Structure
+- src/: Contains the source code of the application.
+- components/: Contains the React components.
+- App.tsx: Main application component.
+- main.tsx: Entry point for the React application.
+- index.css: Global styles.
+- public/: Contains static assets.
+- package.json: Contains the project dependencies and scripts.
+- .env: Environment variables.
