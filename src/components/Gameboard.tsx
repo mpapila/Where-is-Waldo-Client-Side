@@ -145,7 +145,7 @@ function Gameboard({ setIsRunning, timer }: SetIsRunningProps) {
             // console.log(`${bodyString}`)
 
             const result = await response.json()
-            // console.log('result', result.message)
+            console.log('result', result.message)
             setIsGameOver(false)
             setShowScoreboard(true)
 
