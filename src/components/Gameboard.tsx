@@ -46,12 +46,23 @@ function Gameboard({ setIsRunning, timer }: SetIsRunningProps) {
 
     // Effect hook to handle window resize and image rendering
     useEffect(() => {
-        const renderedWidth = document.getElementById("waldoPic")?.clientWidth
-        if (!renderedWidth || renderedWidth == 0) {
-            location.reload(); // Reload the page if the rendered width is not available or zero
-        }
-        if (!renderedWidth) return
-        setRenderedPicWidth(renderedWidth)
+        // const renderedWidth = document.getElementById("waldoPic")?.clientWidth
+        // if (!renderedWidth || renderedWidth == 0) {
+        //     location.reload(); // Reload the page if the rendered width is not available or zero
+        // }
+        // if (!renderedWidth) return
+        // setRenderedPicWidth(renderedWidth)
+
+        const checkRenderedWidth = () => {
+            const renderedWidth = document.getElementById("waldoPic")?.clientWidth;
+            if (renderedWidth && renderedWidth > 0) {
+                setRenderedPicWidth(renderedWidth);
+                clearInterval(intervalId); // Clear the interval once the width is set
+            }
+        };
+
+        // Check the width every 100ms until it's greater than 0
+        const intervalId = setInterval(checkRenderedWidth, 100);
 
         const handleResize = () => setWindowWidth(window.innerWidth);
         window.addEventListener("resize", handleResize);
