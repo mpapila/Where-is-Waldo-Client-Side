@@ -46,18 +46,12 @@ function Gameboard({ setIsRunning, timer }: SetIsRunningProps) {
 
     // Effect hook to handle window resize and image rendering
     useEffect(() => {
-        // const renderedWidth = document.getElementById("waldoPic")?.clientWidth
-        // if (!renderedWidth || renderedWidth == 0) {
-        //     location.reload(); // Reload the page if the rendered width is not available or zero
-        // }
-        // if (!renderedWidth) return
-        // setRenderedPicWidth(renderedWidth)
 
         const checkRenderedWidth = () => {
             const renderedWidth = document.getElementById("waldoPic")?.clientWidth;
             if (renderedWidth && renderedWidth > 0) {
                 setRenderedPicWidth(renderedWidth);
-                clearInterval(intervalId); // Clear the interval once the width is set
+                clearInterval(intervalId);
             }
         };
 
@@ -177,7 +171,7 @@ function Gameboard({ setIsRunning, timer }: SetIsRunningProps) {
             {showScoreboard && (
                 <>
                     <Modal open={showScoreboard} aria-labelledby="scoreboard-modal-title" aria-describedby="scoreboard-modal-description">
-                        <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '30%', bgcolor: 'background.paper', borderRadius: 1, boxShadow: 24, p: 4, }}
+                        <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: { xs: '50%', sm: '50%', lg: '50%', xl: '30%' }, bgcolor: 'background.paper', borderRadius: 1, boxShadow: 24, p: 4, }}
                         >
                             <DialogTitle sx={{ marginBottom: 3, display: { xs: 'none', sm: 'block' }, fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', borderBottom: 1, borderColor: 'divider' }}>
                                 Scores
