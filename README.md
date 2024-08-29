@@ -3,7 +3,8 @@
 This is the front-end of the "Where is Waldo" game, built with React, TypeScript, and Vite. The game allows users to find hidden characters in an image and submit their scores to a leaderboard.
 
 ## Live Site
-[https://messaging-app-client-side.onrender.com](https://messaging-app-client-side.onrender.com/)
+(https://where-is-waldo-client-side.netlify.app/)](https://where-is-waldo-client-side.netlify.app/))
+
 
 ## Server Repository
 [Where-is-Waldo-Server-Side](https://github.com/mpapila/Where-is-Waldo-Server-Side)
